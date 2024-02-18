@@ -1,0 +1,102 @@
+@import "./mixins.scss";
+
+.home {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 70px;
+
+  > h1 {
+    font-size: 48px;
+  }
+  > p {
+    font-size: 28px;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  & > * {
+    margin-top: 20px;
+  }
+  & > .darkbtn:hover {
+    background-color: $color-light-beige;
+    color: black;
+  }
+  & > .lightbtn:hover {
+    background-color: $color-dark-brown;
+    color: white;
+  }
+}
+
+.showAuth {
+  display: none;
+}
+
+.darkbtn {
+  @include button-dark;
+}
+
+.lightbtn {
+  @include button-light;
+}
+
+.linkBack {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.linkText:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 375px;
+  height: 274px;
+  background-color: $color-pastel-beige;
+  border-radius: 15px;
+  padding: 32px;
+  & > * {
+    margin-top: 30px;
+  }
+}
+
+.btnModal {
+  @include button-dark;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}

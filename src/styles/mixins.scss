@@ -1,0 +1,21 @@
+@import "./variables.scss";
+@mixin button-dark {
+  background-color: $color-dark-brown;
+  color: white;
+  padding: 13px 16px;
+  border-radius: 12px;
+  width: 343px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+@mixin button-light {
+  background-color: $color-light-beige;
+  color: $color-light-brown;
+  padding: 13px 16px;
+  border-radius: 12px;
+  width: 343px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
