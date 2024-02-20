@@ -45,8 +45,8 @@ const SignIn = ({ setShowSignUp }) => {
 
   return (
     <>
-      <p>Вэлком бэк!</p>
       <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
+        <p>Вэлком бэк!</p>
         <Controller
           control={control}
           name="username"

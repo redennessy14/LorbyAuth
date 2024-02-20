@@ -56,6 +56,7 @@ const SingUp = ({ setShowActivation, showActivation }) => {
       {!showActivation ? (
         <form
           onSubmit={handleSubmit(onSubmit)}
+          className={style.form}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -127,23 +128,29 @@ const SingUp = ({ setShowActivation, showActivation }) => {
               />
             )}
           />
-
           <div className={style.rules}>
             <ul>
               {passwordValidation.map((isValid, index) => (
                 <li
                   key={index}
-                  className={isValid ? style.valid : style.invalid}
+                  className={
+                    isValid !== undefined
+                      ? isValid
+                        ? style.valid
+                        : style.invalid
+                      : ""
+                  }
                 >
                   {index === 0 && "От 8 до 15 символов Минимум"}
                   {index === 1 && "Строчные и прописные буквы"}
                   {index === 2 && "Минимум 1 цифра"}
-                  {index === 3 && '1 спецсимвол (!, ", #, $...)'}
+                  {index === 3 && '1 спецсимвол (!, ", #, $...)"'}
                   {isValid !== undefined && (isValid ? "✅" : "❌")}
                 </li>
               ))}
             </ul>
           </div>
+
           <Controller
             control={control}
             name="password_confirm"

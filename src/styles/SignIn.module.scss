@@ -1,6 +1,9 @@
 .form {
   display: flex;
   flex-direction: column;
+  > p {
+    font-size: 32px;
+  }
 }
 
 .linkText:hover {

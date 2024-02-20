@@ -1,3 +1,13 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  > p {
+    font-size: 32px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .rules {
   font-size: 12px;
   color: rgba(118, 118, 118, 1);
